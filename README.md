@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img src="https://wallpapers.com/images/hd/kiyotaka-ayanokoji-in-a-dark-room-a1w8t6bae428ddz3.jpg" alt="Header Image" width="100%"/>
+<img src="https://images5.alphacoders.com/941/941369.png" alt="Header Image" width="100%"/>
 
 <br/>
 <hr>
