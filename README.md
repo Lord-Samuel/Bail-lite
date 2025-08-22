@@ -96,7 +96,7 @@ import makeWASocket from 'bail-lite'
         - [Status Mentions Message](#status-mentions-message) 
         - [Shop Message](#shop-message) 
         - [Collection Message](#collection-message) 
-    - [AI Icon Feature](ai-icon-feature) 
+    - [AI Icon Feature](#ai-icon-feature) 
     - [Sending with Link Preview](#sending-messages-with-link-previews)
     - [Media Messages](#media-messages)
         - [Gif Message](#gif-message)
