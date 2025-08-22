@@ -307,10 +307,7 @@ sock.ev.on('creds.update', saveCreds)
 - Baileys uses the EventEmitter syntax for events. 
 They're all nicely typed up, so you shouldn't have any issues with an Intellisense editor like VS Code.
 
-> [!IMPORTANT]
-> **The events are [these](https://baileys.whiskeysockets.io/types/BaileysEventMap.html)**, it's important you see all events
-
-You can listen to these events like this:
+## You can listen to these events like this:
 ```js
 const sock = makeWASocket()
 sock.ev.on('messages.upsert', ({ messages }) => {
@@ -388,9 +385,9 @@ const connectAuth = async() => {
             console.log('Successfully Connected To MongoDB Server')
         }
     })
-}
+
   await client.connect()
-  const collection = client.db("@itsockchann").collection("sessions")
+  const collection = client.db("bail-lite").collection("sessions")
   return collection
 }
 
@@ -414,7 +411,7 @@ sock.ev.on('creds.update', saveCreds)
 import pino from "pino"
 import { makeInMemoryStore, getAggregateVotesInPollMessage } from 'bail-lite'
 
-const logger = pino({ timestamp: () => `,"time":"${new Date().toJSON()}"` }).child({ class: "@Itsockchann" })
+const logger = pino({ timestamp: () => `,"time":"${new Date().toJSON()}"` }).child({ class: "Rebix" })
 logger.level = "fatal"
 const store = makeInMemoryStore({ logger })
 
@@ -424,7 +421,7 @@ async function getMessage(key){
         return msg?.message
     }
     return {
-        conversation: "Itsocki Kawaiii"
+        conversation: "Bail Lite"
     }
 } 
 
@@ -453,7 +450,7 @@ sock.ev.on("messages.update", async (chatUpdate) => {
 
 ## Implementing a Data Store
 
-- Baileys does not come with a defacto storage for chats, contacts, or messages. However, a simple in-memory implementation has been provided. The store listens for chat updates, new messages, message updates, etc., to always have an up-to-date version of the data.
+- Baileys does not come with a storage for chats, contacts, or messages. However, a simple in-memory implementation has been provided. The store listens for chat updates, new messages, message updates, etc., to always have an up-to-date version of the data.
 
 > [!IMPORTANT]
 > I highly recommend building your own data store, as storing someone's entire chat history in memory is a terrible waste of RAM.
@@ -591,7 +588,7 @@ await sock.sendMessage(
     id,
     { 
         contacts: { 
-            displayName: 'Itsockchann', 
+            displayName: 'samuel -!Rebix', 
             contacts: [{ vcard }] 
         }
     }
@@ -735,7 +732,7 @@ await sock.sendMessage(
             surface: 'CATALOG',
             message: 'your_caption',
             orderTitle: "your_title",
-            sellerJid: 'your_jid'',
+            sellerJid: 'your_jid',
             token: 'your_token',
             totalAmount1000: 'your_amount',
             totalCurrencyCode: 'IDR'
@@ -792,7 +789,7 @@ await sock.sendMessage(
 )
 ```
 
-#### Payment Invite Message
+### Payment Invite Message
 ```js
 await sock.sendMessage(
     id, 
@@ -840,13 +837,12 @@ await sock.sendMessage(
 
 ### Sticker Pack Message
 ```js 
-// I don't know why the sticker doesn't appear
 await sock.sendMessage(
     jid,
     {
         stickerPack: {
             name: 'Hiii', 
-            publisher: 'By Itsockchann', 
+            publisher: 'Lord-Samuel', 
             description: 'Hello', 
             cover: Buffer, // Image buffer
             stickers: [{
@@ -937,7 +933,7 @@ await sock.sendMessage(
             body: 'Hii', 
             nativeFlows: {
                 name: 'menu_options', 
-                paramsJson: JSON.stringify({ id: 'ID', description: 'description' }) 
+                paramsJson: JSON.stringify({ id: 'ID', description: 'description' }),
                 version: 1 // 2 | 3
             }
        }, 
@@ -1239,7 +1235,7 @@ await sock.sendMessage(
                     flow_message_version: '3', 
                     flow_token: '1:1307913409923914:293680f87029f5a13d1ec5e35e718af3',
                     flow_id: '1307913409923914',
-                    flow_cta: 'Itsockchann kawaii >\\<', 
+                    flow_cta: 'samuel -!Rebix', 
                     flow_action: 'navigate', 
                     flow_action_payload: {
                     	screen: 'QUESTION_ONE',
@@ -1400,7 +1396,7 @@ await sock.sendMessage(
             description: 'Description',
             currencyCode: 'IDR',
             priceAmount1000: '283xxx',
-            retailerId: 'Itsockchann',
+            retailerId: 'samuel -!Rebix',
             url: 'https://example.com',
             productImageCount: 1
         },
@@ -1436,8 +1432,8 @@ await sock.sendMessage(
                 payment_settings: [{ 
                    type: "pix_static_code", 
                    pix_static_code:  { 
-                      merchant_name: 'itsockchann kawaii >\\\\\\<', 
-                      key: 'example@itsockchan.com', 
+                      merchant_name: 'samuel -!Rebix', 
+                      key: 'example@samuel.com', 
                       key_type: 'EMAIL' // PHONE || EMAIL || CPF || EVP 
                    } 
                }] 
@@ -1480,7 +1476,7 @@ await sock.sendMessage(
                     order_type: 'PAYMENT_REQUEST', 
                     items: [{
                         retailer_id: 'your_retailer_id', 
-                        name: 'Itsockchann Kawaii >\\\<', 
+                        name: 'samuel -!Rebix', 
                         amount: {
                             value: '999999999', 
                             offset: '100'
@@ -1488,7 +1484,7 @@ await sock.sendMessage(
                         quantity: '1', 
                     }]
                 }, 
-                additional_note: 'Itsockchann Kawaii >\\\<', 
+                additional_note: 'samuel -!Rebix', 
                 native_payment_methods: [], 
                 share_payment_status: false
             }) 
@@ -1662,7 +1658,7 @@ await sock.sendMessage(
             description: 'Description',
             currencyCode: 'IDR',
             priceAmount1000: '283xxx',
-            retailerId: 'Itsockchann',
+            retailerId: 'samuel -!Rebix',
             url: 'https://example.com',
             productImageCount: 1
         },
@@ -1799,7 +1795,7 @@ await sock.sendMessage(
             description: 'Description',
             currencyCode: 'IDR',
             priceAmount1000: '283xxx',
-            retailerId: 'Itsockchann',
+            retailerId: 'samuel -!Rebix',
             url: 'https://example.com',
             productImageCount: 1
         },
@@ -1853,7 +1849,7 @@ await sock.relayMessage(
 await sock.sendMessage(
     jid,
     {
-        text: 'Hi, this was sent using https://github.com/whiskeysockets/baileys'
+        text: 'Hi, this was sent using https://github.com/Lord-Samuel/bail-lite'
     }
 )
 ```
@@ -1863,7 +1859,7 @@ await sock.sendMessage(
 Sending media (video, stickers, images) is easier & more efficient than ever.
 
 > [!NOTE]
-> In media messages, you can pass `{ stream: Stream }` or `{ url: Url }` or `Buffer` directly, you can see more [here](https://baileys.whiskeysockets.io/types/WAMediaUpload.html)
+> In media messages, you can pass `{ stream: Stream }` or `{ url: Url }` or `Buffer` directly.
 
 - When specifying a media url, Baileys never loads the entire buffer into memory it even encrypts the media as a readable stream.
 
@@ -1951,7 +1947,7 @@ await sock.sendMessage(
 await sock.sendMessage(
     id, 
     { 
-        album: [{
+        albumMessage: [{
         	image: {
         		url: 'https://example.com/itsockchan.jpg'
         	}, 
@@ -1967,7 +1963,7 @@ await sock.sendMessage(
         }, {
         	video: Buffer, 
         	caption: 'Hay'
-        }
+        }]
     }
 )
 ```
