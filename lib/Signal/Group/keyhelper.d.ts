@@ -1,4 +1,4 @@
-import { generateKeyPair } from '@itsukichan/libsignal-node/src/curve'
+import { generateKeyPair } from 'node-libsignal-me/src/curve'
 
 type KeyPairType = ReturnType<typeof generateKeyPair>
 

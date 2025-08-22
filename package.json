@@ -1,6 +1,6 @@
 {
   "name": "bail-lite",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "description": "WhatsApp API Modification By Lord-Samuel",
   "keywords": [
     "whatsapp",
@@ -46,7 +46,7 @@
     "@adiwajshing/keyed-db": "^0.2.4",
     "@cacheable/node-cache": "1.5.3", 
     "@itsukichan/eslint-config": "^1.0.0", 
-    "@itsukichan/libsignal-node": "^1.0.1", 
+    "node-libsignal-me": "^1.0.1", 
     "async-mutex": "^0.5.0",
     "axios": "^1.6.0",
     "audio-decode": "^2.2.2", 
