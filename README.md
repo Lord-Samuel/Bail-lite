@@ -31,8 +31,16 @@ yarn add github: bail-lite
 ```
 
 Then import your code using:
-```js 
+
+
+MJS:
+```mjs 
 import makeWASocket from 'bail-lite'
+```
+
+CJS:
+```cjs
+const { defalt: makeWaSocket } = require('bail-lite')
 ```
 
 ## Links
