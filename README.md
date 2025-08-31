@@ -33,20 +33,15 @@ yarn add github: bail-lite
 Then import your code using:
 
 
-MJS:
+> ### MJS:
 ```mjs 
 import makeWASocket from 'bail-lite'
 ```
 
-CJS:
+> ### CJS:
 ```cjs
 const { defalt: makeWaSocket } = require('bail-lite')
 ```
-
-## Links
-
-- [Docs](https://guide.whiskeysockets.io/)
-- [Discord](https://discord.gg/nqssuNjjSH)
 
 # Index
 
@@ -2468,8 +2463,8 @@ await sock.updateGroupsAddPrivacy(value)
 
 - Like [this](#disappearing-messages), ephemeral can be:
 
-| Time  | Seconds        |
-|-------|----------------|
+| Time   | Seconds    |
+|--------|------------|
 | Remove | 0          |
 | 24h    | 86.400     |
 | 7d     | 604.800    |
@@ -2509,9 +2504,11 @@ await sock.sendMessage(
 - You can send messages to broadcast lists the same way you send messages to groups & individual chats.
 - Right now, WA Web does not support creating broadcast lists, but you can still delete them.
 - Broadcast IDs are in the format `12345678@broadcast`
+
 ### Query a Broadcast List's Recipients & Name
 ```js
 const bList = await sock.getBroadcastListInfo('1234@broadcast')
+
 console.log (`list name: ${bList.name}, recps: ${bList.recipients}`)
 ```
 
@@ -2586,4 +2583,4 @@ sock.ws.on('CB:edge_routing,id:abcd,routing_info', (node: BinaryNode) => { })
 ```
 
 > [!NOTE]
-> Also, this repo is now licenced under GPL 3 since it uses [libsignal-node](https://git.questbook.io/backend/service-coderunner/-/merge_requests/1)
+> This Repo Was Initialy Created For Fun. If There Any Errors Make An Issue.
