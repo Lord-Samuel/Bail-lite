@@ -1,14 +1,11 @@
 {
   "name": "bail-lite",
-  "version": "0.6.6",
-  "description": "WhatsApp API Modification By Lord-Samuel",
+  "version": "0.6.7",
+  "description": "Baileys Modded To Suit The Needs Of Others",
   "keywords": [
     "whatsapp",
-    "js-whatsapp",
     "whatsapp-api",
     "whatsapp-web",
-    "whatsapp-chat",
-    "whatsapp-group",
     "automation",
     "multi-device"
   ],
