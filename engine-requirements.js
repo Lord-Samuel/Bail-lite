@@ -7,4 +7,4 @@ if (major < 20) {
     `   Please upgrade to Node.js 20+ to proceed.\n`
   );
   process.exit(1);
-}
+} 
